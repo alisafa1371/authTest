@@ -6,8 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
+    "deploy": "gh-pages -d out",
+    "build-and-deploy": "npm run build && npm run export && npm run deploy",
+    "predeploy": "npm run build && npm run export",
     "lint": "next lint"
   },
+  "homepage": "https://alisafa1371.github.io/authTest",
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
     "google-libphonenumber": "^3.2.42",
@@ -22,6 +27,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "gh-pages": "^6.3.0",
     "typescript": "^5"
   }
 }
